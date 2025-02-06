@@ -11,13 +11,14 @@ export default function BirthdayCard() {
   const [showConfetti, setShowConfetti] = useState(false)
   const [isMusicPlaying, setIsMusicPlaying] = useState(false)
   const [showPopup, setShowPopup] = useState(false)
-  const audioRef = useRef(null)
-
+  
+  const audioRef = useRef<HTMLAudioElement>(null)
   const dragY = useMotionValue(0)
   const [IsCakeSliced, setIsCakeSliced] = useState(false)
   const cakeOpacity = useTransform(dragY, [0, 200], [1, 0])
 
   useEffect(() => {
+    // The audio element will definitely exist when the ref is set
     if (audioRef.current) {
       audioRef.current.volume = 0.5
     }
