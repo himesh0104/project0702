@@ -15,7 +15,7 @@ export default function BirthdayCard() {
 
   // Drag to cut cake functionality
   const dragY = useMotionValue(0)
-  const [_isCakeSliced, setIsCakeSliced] = useState(false)
+  const [, setIsCakeSliced] = useState(false)
   const cakeOpacity = useTransform(dragY, [0, 200], [1, 0])
 
   useEffect(() => {
@@ -53,8 +53,8 @@ export default function BirthdayCard() {
         setShowConfetti(false);
         setTimeout(() => {
           setShowPopup(true);
-        }, 5000);
-      }, 5000);
+        }, 2000);
+      }, 2000);
     }
   };
   
@@ -224,7 +224,7 @@ export default function BirthdayCard() {
                 >
                   <X className="w-6 h-6" />
                 </button>
-                <h3 className="text-2xl font-bold text-pink-600 mb-4">Again I am Wishing You The Happiest Birthday Revati!</h3>
+                <h3 className="text-2xl font-bold text-pink-600 mb-4">Again I am Wishing You The Happiest Birthday RevatiJii!! </h3>
                 <p className="text-gray-600">May your day be filled with joy, laughter, and wonderful memories!</p>
               </div>
             </motion.div>
