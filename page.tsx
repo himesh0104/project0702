@@ -7,7 +7,7 @@ import Popup from "./Popup"
 const App = () => {
   const [showConfetti, setShowConfetti] = useState(false)
   const [showPopup, setShowPopup] = useState(false)
-  const [dragY, setDragY] = useState(useRef(0))
+  const dragY = useRef(0)
 
   const [{ isDragging }, drag] = useDrag(() => ({
     type: ItemTypes.BOX,
@@ -25,7 +25,7 @@ const App = () => {
   }))
 
   const handleDrag = useCallback((e) => {
-    setDragY(e.pageY)
+    dragY.current = e.pageY
   }, [])
 
   const handleDragEnd = () => {
