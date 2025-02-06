@@ -15,7 +15,7 @@ export default function BirthdayCard() {
 
   // Drag to cut cake functionality
   const dragY = useMotionValue(0)
-  const [isCakeSliced, setIsCakeSliced] = useState(false)
+  const [_isCakeSliced, setIsCakeSliced] = useState(false)
   const cakeOpacity = useTransform(dragY, [0, 200], [1, 0])
 
   useEffect(() => {
