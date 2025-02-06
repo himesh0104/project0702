@@ -14,7 +14,7 @@ export default function BirthdayCard() {
   const audioRef = useRef(null)
 
   const dragY = useMotionValue(0)
-  const [isCakeSliced, setIsCakeSliced] = useState(false)
+  const [IsCakeSliced, setIsCakeSliced] = useState(false)
   const cakeOpacity = useTransform(dragY, [0, 200], [1, 0])
 
   useEffect(() => {
